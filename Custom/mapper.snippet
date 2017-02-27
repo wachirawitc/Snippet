@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>mapper</Title>
+			<Shortcut>mapper</Shortcut>
+			<Description>Map class A to B</Description>
+			<Author>Toom</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>source</ID>
+					<ToolTip>Source class for map</ToolTip>
+					<Default>MySourceClass</Default>
+				</Literal>
+				<Literal>
+					<ID>destination</ID>
+					<ToolTip>Destination class for map</ToolTip>
+					<Default>MyDestinationClass</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp"><![CDATA[public class Map$source$To$destination$ : IMapper<$source$,$destination$>
+			{
+				public Map$source$To$destination$()
+				{
+				
+				}
+				
+				public $destination$ Apply($source$ model)
+				{
+					$destination$ destination = null;
+					if(model != null)
+					{
+						destination = new $destination$();
+						//TODO
+					}
+					
+					return destination;
+				}
+			
+				$selected$$end$
+			}]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>
